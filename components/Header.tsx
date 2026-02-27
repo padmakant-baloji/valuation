@@ -88,12 +88,24 @@ export default function Header() {
               ASB Valuers & Engineers
             </Typography>
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3, alignItems: 'center' }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, alignItems: 'center' }}>
             <Button
               onClick={() => handleScrollTo('services')}
               sx={{ color: 'text.primary', fontWeight: 500 }}
             >
               Services
+            </Button>
+            <Button
+              href="/services/ibbi-registered-valuer-belagavi"
+              sx={{ color: 'text.primary', fontWeight: 500 }}
+            >
+              IBBI Valuer
+            </Button>
+            <Button
+              href="/locations/belagavi"
+              sx={{ color: 'text.primary', fontWeight: 500 }}
+            >
+              Locations
             </Button>
             <Button
               onClick={() => handleScrollTo('about')}
@@ -112,9 +124,9 @@ export default function Header() {
               color="secondary"
               startIcon={<Phone />}
               href="tel:+918880519265"
-              sx={{ ml: 2 }}
+              sx={{ ml: 1 }}
             >
-              Call Now
+              Request Valuation
             </Button>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>

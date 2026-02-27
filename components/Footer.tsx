@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react'
+import NextLink from 'next/link'
 import { Box, Container, Typography, Grid, Link, Stack } from '@mui/material'
 import { Phone, Email, LocationOn } from '@mui/icons-material'
 
@@ -50,6 +51,27 @@ export default function Footer() {
               <Link href="#services" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
                 Services
               </Link>
+              <NextLink
+                href="/services/ibbi-registered-valuer-belagavi"
+                style={{ textDecoration: 'none' }}
+              >
+                <Link component="span" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
+                  IBBI Registered Valuer
+                </Link>
+              </NextLink>
+              <NextLink
+                href="/services/bank-approved-valuation-karnataka"
+                style={{ textDecoration: 'none' }}
+              >
+                <Link component="span" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
+                  Bank Approved Valuer
+                </Link>
+              </NextLink>
+              <NextLink href="/locations/belagavi" style={{ textDecoration: 'none' }}>
+                <Link component="span" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
+                  Belagavi Office
+                </Link>
+              </NextLink>
               <Link href="#about" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
                 About Us
               </Link>

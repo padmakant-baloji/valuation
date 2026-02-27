@@ -11,6 +11,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  Link,
 } from '@mui/material'
 import {
   Home,
@@ -21,6 +22,7 @@ import {
   WaterDrop,
   CheckCircle,
 } from '@mui/icons-material'
+import NextLink from 'next/link'
 
 const services = [
   {
@@ -114,6 +116,38 @@ export default function ServicesSection() {
         >
           Professional services tailored to meet your valuation and engineering needs
         </Typography>
+
+        <Box sx={{ textAlign: 'center', mb: 4 }}>
+          <Typography variant="body1" sx={{ mb: 2, color: 'text.secondary' }}>
+            Looking for specific services?{' '}
+            <NextLink
+              href="/services/ibbi-registered-valuer-belagavi"
+              style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}
+            >
+              <Link component="span" sx={{ color: 'primary.main', fontWeight: 600 }}>
+                IBBI Registered Valuer
+              </Link>
+            </NextLink>
+            {' | '}
+            <NextLink
+              href="/services/bank-approved-valuation-karnataka"
+              style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}
+            >
+              <Link component="span" sx={{ color: 'primary.main', fontWeight: 600 }}>
+                Bank Approved Valuer
+              </Link>
+            </NextLink>
+            {' | '}
+            <NextLink
+              href="/services/technical-due-diligence-consultant"
+              style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}
+            >
+              <Link component="span" sx={{ color: 'primary.main', fontWeight: 600 }}>
+                Technical Due Diligence
+              </Link>
+            </NextLink>
+          </Typography>
+        </Box>
 
         <Grid container spacing={4}>
           {services.map((service, index) => (

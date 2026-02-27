@@ -1,8 +1,11 @@
 'use client'
 
 import * as React from 'react'
+import { useServerInsertedHTML } from 'next/navigation'
+import { CacheProvider } from '@emotion/react'
+import createCache from '@emotion/cache'
+import { CssBaseline } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
 
 const theme = createTheme({
   palette: {
@@ -82,11 +85,44 @@ const theme = createTheme({
   },
 })
 
+function createEmotionCache() {
+  const cache = createCache({ key: 'css', prepend: true })
+  cache.compat = true
+  return cache
+}
+
 export default function ThemeRegistry({ children }: { children: React.ReactNode }) {
+  const [emotionCache] = React.useState(() => createEmotionCache())
+
+  useServerInsertedHTML(() => {
+    const { key, inserted } = emotionCache
+    const names = Object.keys(inserted)
+
+    if (names.length === 0) {
+      return null
+    }
+
+    let styles = ''
+    for (const name of names) {
+      if (name === 'global') continue
+      styles += inserted[name]
+    }
+
+    return (
+      <style
+        key={key}
+        data-emotion={`${key} ${names.join(' ')}`}
+        dangerouslySetInnerHTML={{ __html: styles }}
+      />
+    )
+  })
+
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
-    </ThemeProvider>
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
+    </CacheProvider>
   )
 }
