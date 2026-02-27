@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next'
 
+// Ensure this route is statically generated so it works with `output: 'export'`
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://asbvaluers.com'
 
