@@ -8,6 +8,11 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'ASB Valuers & Engineers | IBBI Registered Valuers | Belagavi',
   description: 'Professional real estate valuation, technical due diligence, and engineering consultancy services. Trusted by 25+ Banks & Financial Institutions across Karnataka.',
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 }
 
 export default function RootLayout({
