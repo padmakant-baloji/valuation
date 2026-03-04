@@ -6,11 +6,11 @@ import { CheckCircle } from '@mui/icons-material'
 
 const trustPoints = [
   {
-    title: 'Completed 12,000+ valuation assignments',
+    title: 'Completed 40,000+ valuation assignments',
     description: 'Extensive experience across diverse property types',
   },
   {
-    title: 'Associated with 25+ Banks & NBFCs',
+    title: 'Associated with 30+ Banks & NBFCs',
     description: 'Trusted by leading financial institutions',
   },
   {

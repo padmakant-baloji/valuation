@@ -78,7 +78,7 @@ export default function HeroSection() {
               }}
             >
               Professional real estate valuation, technical due diligence, and engineering
-              consultancy services trusted by 25+ Banks & Financial Institutions across
+              consultancy services trusted by 30+ Banks & Financial Institutions across
               Karnataka.
             </Typography>
 
@@ -124,11 +124,10 @@ export default function HeroSection() {
 
             <Grid container spacing={2} sx={{ mt: 2 }}>
               {[
-                '12,000+ Valuations Completed',
-                '9+ Years of Experience',
+                '40,000+ Valuations Completed',
+                '10+ Years of Experience',
                 'IBBI Registered Valuer',
                 'Chartered Engineer (IEI)',
-                'VTU Gold Medalist Expertise',
               ].map((item, index) => (
                 <Grid item xs={12} sm={6} key={index}>
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

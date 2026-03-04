@@ -76,7 +76,7 @@ const services = [
   },
   {
     icon: <WaterDrop />,
-    title: 'Lift Irrigation Project Works',
+    title: 'Building Planning and Design',
     items: ['Planning', 'Design', 'Execution management'],
   },
 ]
