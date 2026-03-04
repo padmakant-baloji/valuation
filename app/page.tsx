@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
 import TrustSection from '@/components/TrustSection'
+import ClientsSection from '@/components/ClientsSection'
 import AboutSection from '@/components/AboutSection'
 import ServicesSection from '@/components/ServicesSection'
 import WhyChooseSection from '@/components/WhyChooseSection'
@@ -93,6 +94,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <TrustSection />
+        <ClientsSection />
         <AboutSection />
         <ServicesSection />
         <ContentSection />
