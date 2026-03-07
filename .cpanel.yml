@@ -1,0 +1,20 @@
+---
+deployment:
+  tasks:
+    - export: CPANEL_HOOK_EXPORT
+      /:
+        source: /
+        destination: $HOME/public_html/
+      build:
+        - npm install
+        - npm run build
+      post_build:
+        - rm -rf $HOME/public_html/*
+        - cp -r out/* $HOME/public_html/
+      exclude:
+        - node_modules/
+        - .git/
+        - .next/
+        - .env*
+        - *.log
+        - .DS_Store
