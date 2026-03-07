@@ -54,7 +54,7 @@ export default function HeroSection() {
                 lineHeight: 1.2,
               }}
             >
-              Trusted IBBI-Registered Valuers
+              Professional Property Valuation & Real Estate Valuation Services
             </Typography>
             <Typography
               variant="h5"
@@ -66,7 +66,7 @@ export default function HeroSection() {
                 lineHeight: 1.6,
               }}
             >
-              Delivering Accurate & Bank-Compliant Property Valuations
+              Accurate Land Rate Assessment, Site Rate Evaluation & Technical Reports
             </Typography>
             <Typography
               variant="body1"
@@ -77,9 +77,7 @@ export default function HeroSection() {
                 lineHeight: 1.7,
               }}
             >
-              Professional real estate valuation, technical due diligence, and engineering
-              consultancy services trusted by 30+ Banks & Financial Institutions across
-              Karnataka.
+              Professional property valuation, real estate valuation, land rate assessment, site rate evaluation, property appraisals, and technical reports. Trusted by 30+ Banks & Financial Institutions across Karnataka. Find out "my property value" with our comprehensive valuation services.
             </Typography>
 
             <Stack

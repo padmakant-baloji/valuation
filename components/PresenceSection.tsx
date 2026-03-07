@@ -44,7 +44,7 @@ export default function PresenceSection() {
               Our Presence
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3, lineHeight: 1.7 }}>
-              Serving clients across Karnataka with comprehensive coverage:
+              Serving clients across Karnataka with comprehensive property valuation, real estate valuation, land rate assessment, and site rate evaluation services:
             </Typography>
             <Grid container spacing={2}>
               {locations.map((location, index) => (
@@ -66,8 +66,7 @@ export default function PresenceSection() {
               ))}
             </Grid>
             <Typography variant="body2" color="text.secondary" sx={{ mt: 3, fontStyle: 'italic' }}>
-              We provide on-site inspections and professional valuation services across multiple
-              cities and districts.
+              We provide on-site inspections and professional property valuation, real estate valuation, land rate assessment, site rate evaluation, and technical report services across multiple cities and districts in Karnataka.
             </Typography>
           </Grid>
 
@@ -88,7 +87,7 @@ export default function PresenceSection() {
               Who We Serve
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3, lineHeight: 1.7 }}>
-              Trusted by diverse clients across industries:
+              Trusted by diverse clients across industries for property valuation, real estate valuation, land rate assessment, and property appraisal services:
             </Typography>
             <Grid container spacing={2}>
               {clients.map((client, index) => (

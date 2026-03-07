@@ -19,13 +19,30 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'IBBI Registered Valuer Belagavi | Bank Approved Valuer Karnataka',
-  description: 'IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. 40,000+ valuations, 30+ banks served. Get bank-compliant reports within 48 hours.',
+  description: 'Professional property valuation, real estate valuation, land rate assessment, site rate evaluation, and technical reports in Karnataka. IBBI Registered Valuer in Belagavi. Bank-approved property valuation services. 40,000+ valuations, 30+ banks served. Get bank-compliant reports within 48 hours.',
   keywords: [
+    'Valuation',
+    'Property valuation',
+    'Land rate',
+    'Real estate valuation',
+    'Site rate',
+    'Apprises',
+    'Technical report',
+    'My property value',
     'IBBI Registered Valuer Belagavi',
     'Bank Approved Valuer Karnataka',
     'Property Valuation Belgaum',
     'Government Approved Valuer Karnataka',
     'Technical Due Diligence Consultant Karnataka',
+    'Property valuation services Karnataka',
+    'Land valuation Belagavi',
+    'Site valuation report',
+    'Property appraisal services',
+    'Real estate appraiser Karnataka',
+    'Property value assessment',
+    'Land rate assessment Karnataka',
+    'Site rate evaluation',
+    'Property technical report',
   ],
 }
 
@@ -58,6 +75,30 @@ export default function Home() {
           text: 'Our valuation reports are accepted by 30+ major banks and financial institutions including State Bank of India, HDFC Bank, ICICI Bank, Axis Bank, Kotak Mahindra Bank, and numerous NBFCs across Karnataka.',
         },
       },
+      {
+        '@type': 'Question',
+        name: 'How can I find out my property value?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'To determine your property value, we conduct comprehensive property valuation and real estate valuation assessments. Our IBBI Registered Valuers perform on-site inspections, analyze comparable properties, assess land rate and site rate factors, review market trends, and prepare detailed valuation reports.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is land rate and how is it determined?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Land rate refers to the per-square-foot or per-square-meter value of land in a specific location. Our land rate assessment considers factors such as location, accessibility, infrastructure development, zoning regulations, market demand, comparable land sales, and development potential.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is included in a technical report for property valuation?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our technical report for property valuation includes structural assessment, building condition evaluation, compliance verification with building codes and regulations, legal-technical risk analysis, construction quality review, and recommendations. Technical reports are essential for banks and financial institutions.',
+        },
+      },
     ],
   }
 
@@ -74,6 +115,75 @@ export default function Home() {
     ],
   }
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Property Valuation Services',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'ASB Valuers & Engineers',
+      url: 'https://asbvaluers.com',
+    },
+    areaServed: {
+      '@type': 'State',
+      name: 'Karnataka',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Valuation Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Property Valuation',
+            description: 'Professional property valuation services for residential, commercial, and industrial properties',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Real Estate Valuation',
+            description: 'Comprehensive real estate valuation and appraisal services',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Land Rate Assessment',
+            description: 'Accurate land rate assessment and evaluation services',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Site Rate Evaluation',
+            description: 'Professional site rate evaluation and assessment',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Property Appraisal',
+            description: 'Expert property appraisal and valuation services',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Technical Report',
+            description: 'Comprehensive technical reports for property valuation and due diligence',
+          },
+        },
+      ],
+    },
+  }
+
   return (
     <>
       <Script
@@ -88,6 +198,13 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
         }}
       />
       <Header />

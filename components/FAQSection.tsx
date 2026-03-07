@@ -62,6 +62,31 @@ const faqs = [
     answer:
       'Yes, we specialize in development feasibility studies, residual land valuation, revenue modeling, and project viability assessment. Our services help developers, investors, and financial institutions evaluate project potential, assess development costs, forecast returns, and make informed investment decisions. We provide comprehensive analysis combining technical, financial, and market perspectives.',
   },
+  {
+    question: 'How can I find out my property value?',
+    answer:
+      'To determine your property value, we conduct comprehensive property valuation and real estate valuation assessments. Our IBBI Registered Valuers perform on-site inspections, analyze comparable properties, assess land rate and site rate factors, review market trends, and prepare detailed valuation reports. Whether you need property valuation for loan approval, sale, or investment purposes, we provide accurate property value assessments that banks and financial institutions trust.',
+  },
+  {
+    question: 'What is land rate and how is it determined?',
+    answer:
+      'Land rate refers to the per-square-foot or per-square-meter value of land in a specific location. Our land rate assessment considers factors such as location, accessibility, infrastructure development, zoning regulations, market demand, comparable land sales, development potential, and proximity to amenities. We provide accurate land rate evaluation that helps property owners, developers, and financial institutions make informed decisions about land transactions and development projects.',
+  },
+  {
+    question: 'What is site rate and how does it differ from land rate?',
+    answer:
+      'Site rate is the value of a developed or partially developed plot, considering both the land value and any improvements such as boundary walls, access roads, utilities, and site preparation. Site rate evaluation includes land rate assessment plus the value of site improvements. Our site rate evaluation services help determine the fair market value of plots ready for construction, considering location, development status, infrastructure, and market conditions.',
+  },
+  {
+    question: 'What is property appraisal and how does it help?',
+    answer:
+      'Property appraisal is a professional assessment of a property\'s market value conducted by certified valuers. Our property appraisal services provide accurate valuations for various purposes including loan applications, property sales, insurance, taxation, legal proceedings, and investment analysis. Our appraisals include detailed analysis of property condition, location factors, market trends, and comparable sales, ensuring reliable property value assessments.',
+  },
+  {
+    question: 'What is included in a technical report for property valuation?',
+    answer:
+      'Our technical report for property valuation includes structural assessment, building condition evaluation, compliance verification with building codes and regulations, legal-technical risk analysis, construction quality review, infrastructure assessment, and recommendations. Technical reports are essential for banks, financial institutions, and investors to understand property condition, identify risks, and make informed lending or investment decisions. We provide comprehensive technical reports prepared by Chartered Engineers and IBBI Registered Valuers.',
+  },
 ]
 
 export default function FAQSection() {
@@ -97,8 +122,7 @@ export default function FAQSection() {
             mx: 'auto',
           }}
         >
-          Get answers to common questions about property valuation, IBBI registration, and our
-          services
+          Get answers to common questions about property valuation, real estate valuation, land rate, site rate, property appraisal, technical reports, and our services
         </Typography>
 
         <Box sx={{ maxWidth: 900, mx: 'auto' }}>

@@ -101,7 +101,7 @@ export default function ServicesSection() {
             fontWeight: 700,
           }}
         >
-          Comprehensive Valuation & Engineering Consultancy
+          Property Valuation, Real Estate Valuation & Engineering Consultancy
         </Typography>
         <Typography
           variant="h6"
@@ -114,7 +114,7 @@ export default function ServicesSection() {
             mx: 'auto',
           }}
         >
-          Professional services tailored to meet your valuation and engineering needs
+          Professional property valuation, real estate valuation, land rate assessment, site rate evaluation, property appraisals, and technical reports tailored to meet your valuation and engineering needs
         </Typography>
 
         <Box sx={{ textAlign: 'center', mb: 4 }}>
