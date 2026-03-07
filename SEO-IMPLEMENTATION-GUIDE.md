@@ -33,7 +33,7 @@ This document outlines the comprehensive SEO strategy implemented for ASB Valuer
 
 ### Homepage (app/page.tsx)
 - **Title Tag**: "IBBI Registered Valuer Belagavi | Bank Approved Valuer Karnataka" (60 chars)
-- **Meta Description**: "IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. 12,000+ valuations, 25+ banks served. Get bank-compliant reports within 48 hours." (160 chars)
+- **Meta Description**: "IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. 40,000+ valuations, 30+ banks served. Get bank-compliant reports within 48 hours." (160 chars)
 - **H1**: "IBBI Registered Valuer Belagavi | Bank Approved Valuer Karnataka"
 - **Content**: 1,500+ words of keyword-rich, natural content
 - **FAQ Section**: 10 questions with schema markup
@@ -122,7 +122,7 @@ This document outlines the comprehensive SEO strategy implemented for ASB Valuer
 
 #### Experience
 - 9+ years of professional experience
-- 12,000+ completed valuations
+- 40,000+ completed valuations
 - Highlighted in AboutSection component
 
 #### Expertise
@@ -132,7 +132,7 @@ This document outlines the comprehensive SEO strategy implemented for ASB Valuer
 - Featured in AboutSection
 
 #### Authority
-- Trusted by 25+ banks and financial institutions
+- Trusted by 30+ banks and financial institutions
 - Featured in TrustSection component
 - Testimonials section
 
@@ -166,8 +166,8 @@ This document outlines the comprehensive SEO strategy implemented for ASB Valuer
 - IBBI Registered Valuer
 - Chartered Engineer (IEI)
 - VTU Gold Medalist
-- 12,000+ Valuations
-- 25+ Banks Served
+- 40,000+ Valuations
+- 30+ Banks Served
 - 9+ Years Experience
 
 ### Urgency CTAs
@@ -232,7 +232,7 @@ Each blog targets:
 ## 9. GOOGLE BUSINESS PROFILE OPTIMIZATION
 
 ### Business Description (750 characters)
-"ASB Valuers & Engineers is an IBBI Registered Valuer and Engineering Consultancy firm in Belagavi and Kudachi, Karnataka. We provide professional property valuation, technical due diligence, and engineering services trusted by 25+ banks and financial institutions. With 9+ years of experience and 12,000+ completed valuations, we deliver bank-compliant reports within 48 hours. Our team includes IBBI Registered Valuers, Chartered Engineers (IEI), and VTU Gold Medalist experts. Services include residential and commercial property valuation, loan security assessment, mortgage valuation, project feasibility studies, and technical due diligence for banks, NBFCs, builders, and property owners across Karnataka."
+"ASB Valuers & Engineers is an IBBI Registered Valuer and Engineering Consultancy firm in Belagavi and Kudachi, Karnataka. We provide professional property valuation, technical due diligence, and engineering services trusted by 30+ banks and financial institutions. With 9+ years of experience and 40,000+ completed valuations, we deliver bank-compliant reports within 48 hours. Our team includes IBBI Registered Valuers, Chartered Engineers (IEI), and VTU Gold Medalist experts. Services include residential and commercial property valuation, loan security assessment, mortgage valuation, project feasibility studies, and technical due diligence for banks, NBFCs, builders, and property owners across Karnataka."
 
 ### Service Keywords for Google Business Profile
 - IBBI Registered Valuer

@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'IBBI Registered Valuer in Belagavi | Bank Approved Property Valuation',
-  description: 'Professional IBBI Registered Valuer in Belagavi, Karnataka. Bank-approved property valuation services. 12,000+ valuations completed. Get IBBI compliant reports within 48 hours.',
+  description: 'Professional IBBI Registered Valuer in Belagavi, Karnataka. Bank-approved property valuation services. 40,000+ valuations completed. Get IBBI compliant reports within 48 hours.',
   keywords: [
     'IBBI Registered Valuer Belagavi',
     'IBBI Registered Valuer Belgaum',
@@ -72,7 +72,7 @@ export default function IBBIValuerPage() {
             </Typography>
             <Typography variant="body1" sx={{ mb: 3, opacity: 0.95 }}>
               ASB Valuers & Engineers is an IBBI Registered Valuer firm in Belagavi, Karnataka,
-              providing professional property valuation services trusted by 25+ banks and financial
+              providing professional property valuation services trusted by 30+ banks and financial
               institutions. Our IBBI registration ensures all reports meet the highest regulatory
               standards.
             </Typography>
@@ -123,12 +123,12 @@ export default function IBBIValuerPage() {
                 </li>
                 <li>
                   <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.8 }}>
-                    12,000+ completed property valuations
+                    40,000+ completed property valuations
                   </Typography>
                 </li>
                 <li>
                   <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.8 }}>
-                    Trusted by 25+ banks and financial institutions
+                    Trusted by 30+ banks and financial institutions
                   </Typography>
                 </li>
               </Box>

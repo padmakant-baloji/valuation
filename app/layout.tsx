@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'IBBI Registered Valuer Belagavi | Bank Approved Valuer Karnataka',
     template: '%s | ASB Valuers & Engineers',
   },
-  description: 'IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. 12,000+ valuations, 25+ banks served. Get bank-compliant reports within 48 hours.',
+  description: 'IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. 40,000+ valuations, 30+ banks served. Get bank-compliant reports within 48 hours.',
   keywords: [
     'IBBI Registered Valuer Belagavi',
     'Bank Approved Valuer Karnataka',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: 'https://asbvaluers.com',
     siteName: 'ASB Valuers & Engineers',
     title: 'IBBI Registered Valuer Belagavi | Bank Approved Valuer Karnataka',
-    description: 'Professional IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. Trusted by 25+ Banks & Financial Institutions.',
+    description: 'Professional IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. Trusted by 30+ Banks & Financial Institutions.',
     images: [
       {
         url: '/logo.png',

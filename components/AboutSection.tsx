@@ -18,7 +18,7 @@ const teamMembers = [
     title: 'B.E (Civil Engineering), MBA',
     credentials: ['IBBI Registered Valuer – India', 'Chartered Engineer (IEI)'],
     description:
-      'With over 9 years of experience and 12,000+ completed valuation assignments, Amar Bale specializes in real estate valuation, development feasibility, cost engineering, and financial risk assessment for banks and institutions.',
+      'With over 9 years of experience and 40,000+ completed valuation assignments, Amar Bale specializes in real estate valuation, development feasibility, cost engineering, and financial risk assessment for banks and institutions.',
     icon: <Engineering sx={{ fontSize: 40 }} />,
   },
   {

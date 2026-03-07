@@ -22,7 +22,7 @@ export default function Footer() {
             </Typography>
             <Typography variant="body2" sx={{ mb: 2, opacity: 0.9 }}>
               Professional real estate valuation and engineering consultancy firm. IBBI
-              Registered Valuers trusted by 25+ Banks & Financial Institutions.
+              Registered Valuers trusted by 30+ Banks & Financial Institutions.
             </Typography>
             <Stack spacing={1}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

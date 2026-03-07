@@ -178,7 +178,7 @@ export default function KarnatakaPage() {
                 </li>
                 <li>
                   <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.8 }}>
-                    Reports accepted by 25+ banks
+                    Reports accepted by 30+ banks
                   </Typography>
                 </li>
                 <li>
@@ -188,7 +188,7 @@ export default function KarnatakaPage() {
                 </li>
                 <li>
                   <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.8 }}>
-                    12,000+ valuations completed
+                    40,000+ valuations completed
                   </Typography>
                 </li>
               </Box>

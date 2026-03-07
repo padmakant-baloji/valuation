@@ -7,7 +7,7 @@ import Script from 'next/script'
 
 export const metadata = {
   title: 'Bank Approved Valuer in Karnataka | Loan Security Valuation Services',
-  description: 'Bank approved property valuers in Karnataka. Professional loan security valuation services for banks, NBFCs, and financial institutions. 25+ banks served. Get reports within 48 hours.',
+  description: 'Bank approved property valuers in Karnataka. Professional loan security valuation services for banks, NBFCs, and financial institutions. 30+ banks served. Get reports within 48 hours.',
   keywords: [
     'Bank Approved Valuer Karnataka',
     'Loan Security Valuation',
@@ -60,7 +60,7 @@ export default function BankApprovedValuerPage() {
 
           <Paper elevation={3} sx={{ p: 4, mb: 4, bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-              Trusted by 25+ Banks & Financial Institutions Across Karnataka
+              Trusted by 30+ Banks & Financial Institutions Across Karnataka
             </Typography>
             <Typography variant="body1" sx={{ mb: 3, opacity: 0.95 }}>
               ASB Valuers & Engineers is a bank-approved valuer firm providing professional loan
@@ -96,7 +96,7 @@ export default function BankApprovedValuerPage() {
                 Banks We Serve
               </Typography>
               <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8 }}>
-                Our valuation reports are accepted by 25+ major banks and financial institutions
+                Our valuation reports are accepted by 30+ major banks and financial institutions
                 including:
               </Typography>
               <Box component="ul" sx={{ pl: 3, mb: 3 }}>
@@ -153,7 +153,7 @@ export default function BankApprovedValuerPage() {
                 </li>
                 <li>
                   <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.8 }}>
-                    Accepted by 25+ banks and financial institutions
+                    Accepted by 30+ banks and financial institutions
                   </Typography>
                 </li>
                 <li>
@@ -168,7 +168,7 @@ export default function BankApprovedValuerPage() {
                 </li>
                 <li>
                   <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.8 }}>
-                    12,000+ completed valuations
+                    40,000+ completed valuations
                   </Typography>
                 </li>
               </Box>

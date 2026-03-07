@@ -19,7 +19,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'IBBI Registered Valuer Belagavi | Bank Approved Valuer Karnataka',
-  description: 'IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. 12,000+ valuations, 25+ banks served. Get bank-compliant reports within 48 hours.',
+  description: 'IBBI Registered Valuer in Belagavi & Karnataka. Bank-approved property valuation services. 40,000+ valuations, 30+ banks served. Get bank-compliant reports within 48 hours.',
   keywords: [
     'IBBI Registered Valuer Belagavi',
     'Bank Approved Valuer Karnataka',
@@ -55,7 +55,7 @@ export default function Home() {
         name: 'Which banks and financial institutions accept your valuation reports?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our valuation reports are accepted by 25+ major banks and financial institutions including State Bank of India, HDFC Bank, ICICI Bank, Axis Bank, Kotak Mahindra Bank, and numerous NBFCs across Karnataka.',
+          text: 'Our valuation reports are accepted by 30+ major banks and financial institutions including State Bank of India, HDFC Bank, ICICI Bank, Axis Bank, Kotak Mahindra Bank, and numerous NBFCs across Karnataka.',
         },
       },
     ],

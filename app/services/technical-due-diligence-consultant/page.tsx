@@ -161,7 +161,7 @@ export default function TechnicalDueDiligencePage() {
                 </li>
                 <li>
                   <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.8 }}>
-                    Trusted by 25+ banks and financial institutions
+                    Trusted by 30+ banks and financial institutions
                   </Typography>
                 </li>
               </Box>

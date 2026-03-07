@@ -25,7 +25,7 @@ const faqs = [
   {
     question: 'Which banks and financial institutions accept your valuation reports?',
     answer:
-      'Our valuation reports are accepted by 25+ major banks and financial institutions including State Bank of India, HDFC Bank, ICICI Bank, Axis Bank, Kotak Mahindra Bank, and numerous NBFCs across Karnataka. We maintain strict compliance with RBI guidelines and bank-specific requirements, ensuring seamless loan processing for our clients.',
+      'Our valuation reports are accepted by 30+ major banks and financial institutions including State Bank of India, HDFC Bank, ICICI Bank, Axis Bank, Kotak Mahindra Bank, and numerous NBFCs across Karnataka. We maintain strict compliance with RBI guidelines and bank-specific requirements, ensuring seamless loan processing for our clients.',
   },
   {
     question: 'What types of properties do you value?',
@@ -55,7 +55,7 @@ const faqs = [
   {
     question: 'What makes your valuation reports different from others?',
     answer:
-      'Our reports stand out due to our IBBI registration, Chartered Engineer credentials, 9+ years of experience, and 12,000+ completed valuations. We combine engineering precision with financial insight, ensuring accurate market analysis, thorough technical assessment, and bank-compliant documentation. Our founders include a VTU Gold Medalist and Chartered Engineer, bringing exceptional expertise to every assignment.',
+      'Our reports stand out due to our IBBI registration, Chartered Engineer credentials, 9+ years of experience, and 40,000+ completed valuations. We combine engineering precision with financial insight, ensuring accurate market analysis, thorough technical assessment, and bank-compliant documentation. Our founders include a VTU Gold Medalist and Chartered Engineer, bringing exceptional expertise to every assignment.',
   },
   {
     question: 'Can you help with project feasibility studies and residual land valuation?',

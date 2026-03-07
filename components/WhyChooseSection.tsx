@@ -33,7 +33,7 @@ const benefits = [
   },
   {
     icon: <Business />,
-    title: 'Trusted by 25+ Institutions',
+    title: 'Trusted by 30+ Institutions',
     description: 'Extensive institutional experience ensures reliability.',
   },
 ]

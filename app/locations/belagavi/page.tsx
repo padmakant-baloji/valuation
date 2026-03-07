@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Property Valuation Services in Belagavi | IBBI Registered Valuer Belgaum',
-  description: 'Professional property valuation services in Belagavi (Belgaum), Karnataka. IBBI Registered Valuer. Bank-approved reports. Serving Belagavi with 12,000+ valuations completed.',
+  description: 'Professional property valuation services in Belagavi (Belgaum), Karnataka. IBBI Registered Valuer. Bank-approved reports. Serving Belagavi with 40,000+ valuations completed.',
   keywords: [
     'Property Valuation Belagavi',
     'Property Valuation Belgaum',
@@ -68,7 +68,7 @@ export default function BelagaviPage() {
 
           <Paper elevation={3} sx={{ p: 4, mb: 4, bgcolor: 'primary.main', color: 'white' }}>
             <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-              IBBI Registered Valuer in Belagavi - Trusted by 25+ Banks
+              IBBI Registered Valuer in Belagavi - Trusted by 30+ Banks
             </Typography>
             <Typography variant="body1" sx={{ mb: 3, opacity: 0.95 }}>
               ASB Valuers & Engineers provides professional property valuation services in Belagavi
@@ -174,7 +174,7 @@ export default function BelagaviPage() {
                 </li>
                 <li>
                   <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.8 }}>
-                    12,000+ valuations completed
+                    40,000+ valuations completed
                   </Typography>
                 </li>
               </Box>

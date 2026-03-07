@@ -32,7 +32,7 @@ export default function ContentSection() {
               When banks evaluate property for loan approval, they conduct a rigorous multi-step
               assessment process to ensure the property serves as adequate security for the loan
               amount. This evaluation is critical for risk management and regulatory compliance. As
-              an IBBI Registered Valuer in Belagavi with 9+ years of experience serving 25+ banks
+              an IBBI Registered Valuer in Belagavi with 9+ years of experience serving 30+ banks
               and financial institutions, ASB Valuers & Engineers understands exactly what banks
               look for in property valuations.
             </Typography>
@@ -87,7 +87,7 @@ export default function ContentSection() {
 
             <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.9, fontSize: '1.1rem' }}>
               Our experienced team conducts thorough on-site inspections, comprehensive market
-              analysis, and detailed documentation review to avoid these pitfalls. With 12,000+
+              analysis, and detailed documentation review to avoid these pitfalls. With 40,000+
               completed valuations, we have the expertise to identify and address potential issues
               before they impact your loan application.
             </Typography>
@@ -119,7 +119,7 @@ export default function ContentSection() {
               With offices in Belagavi and Kudachi, ASB Valuers & Engineers is a trusted partner
               for property valuation and engineering consultancy across Karnataka. Our credentials
               include IBBI Registration, Chartered Engineer (IEI) certification, and VTU Gold
-              Medalist expertise. We have completed over 12,000 valuations and serve 25+ banks and
+              Medalist expertise. We have completed over 40,000 valuations and serve 30+ banks and
               financial institutions.
             </Typography>
 

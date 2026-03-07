@@ -211,8 +211,8 @@ Location Pages
 - ✅ IBBI Registered Valuer badge
 - ✅ Chartered Engineer (IEI) credential
 - ✅ VTU Gold Medalist mention
-- ✅ 12,000+ Valuations completed
-- ✅ 25+ Banks served
+- ✅ 40,000+ Valuations completed
+- ✅ 30+ Banks served
 - ✅ 9+ Years experience
 
 ---
