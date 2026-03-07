@@ -10,7 +10,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/ - Commented out to allow committing built files for cPanel deployment
 
 # production
 /build

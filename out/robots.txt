@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://asbvaluers.com/sitemap.xml
+
+# Disallow admin and private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+
+# Allow all important pages
+Allow: /
+Allow: /services/
+Allow: /locations/
+Allow: /blog/
