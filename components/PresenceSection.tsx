@@ -4,7 +4,7 @@ import * as React from 'react'
 import { Box, Container, Typography, Grid, Paper } from '@mui/material'
 import { LocationOn, Business } from '@mui/icons-material'
 
-const locations = ['Belagavi (Belgaum)', 'Kudachi', 'Surrounding districts']
+const locations = ['All over Karnataka']
 
 const clients = [
   'Banks',
@@ -44,7 +44,7 @@ export default function PresenceSection() {
               Our Presence
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 3, lineHeight: 1.7 }}>
-              Serving clients across Karnataka, with strong operational presence in:
+              Serving clients across Karnataka with comprehensive coverage:
             </Typography>
             <Grid container spacing={2}>
               {locations.map((location, index) => (
