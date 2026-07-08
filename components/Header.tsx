@@ -120,29 +120,64 @@ export default function Header() {
               About
             </Button>
             <Button
+              variant="contained"
+              color="primary"
               href="/#contact"
-              sx={{ color: 'text.primary', fontWeight: 500 }}
+              sx={{ 
+                ml: 1,
+                borderRadius: '50px',
+                px: 3,
+                py: 1,
+                textTransform: 'none',
+                fontWeight: 600,
+                boxShadow: '0 4px 14px 0 rgba(0,118,255,0.39)',
+                '&:hover': {
+                  boxShadow: '0 6px 20px rgba(0,118,255,0.23)',
+                  transform: 'translateY(-1px)',
+                },
+                transition: 'all 0.2s ease-in-out',
+              }}
             >
               Contact
             </Button>
             <Button
               variant="contained"
-              color="secondary"
-              startIcon={<Phone />}
+              color="primary"
               href="tel:+918880519265"
-              sx={{ ml: 1 }}
+              sx={{ 
+                ml: 1,
+                borderRadius: '50%',
+                minWidth: '42px',
+                width: '42px',
+                height: '42px',
+                p: 0,
+                boxShadow: '0 4px 14px 0 rgba(0,118,255,0.39)',
+                '&:hover': {
+                  boxShadow: '0 6px 20px rgba(0,118,255,0.23)',
+                  transform: 'translateY(-1px)',
+                },
+                transition: 'all 0.2s ease-in-out',
+              }}
             >
-              Request Valuation
+              <Phone />
             </Button>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               size="small"
               href="tel:+918880519265"
+              sx={{
+                borderRadius: '50%',
+                minWidth: '40px',
+                width: '40px',
+                height: '40px',
+                p: 0,
+                boxShadow: '0 4px 14px 0 rgba(0,118,255,0.39)',
+              }}
             >
-              <Phone />
+              <Phone fontSize="small" />
             </Button>
           </Box>
         </Toolbar>
