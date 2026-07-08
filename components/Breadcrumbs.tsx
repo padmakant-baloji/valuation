@@ -5,44 +5,58 @@ import { Breadcrumbs as MuiBreadcrumbs, Link, Typography, Box } from '@mui/mater
 import { Home, NavigateNext } from '@mui/icons-material'
 import { usePathname } from 'next/navigation'
 
-export default function Breadcrumbs() {
+interface BreadcrumbItem {
+  label: string
+  href?: string
+}
+
+interface BreadcrumbsProps {
+  items?: BreadcrumbItem[]
+}
+
+export default function Breadcrumbs({ items }: BreadcrumbsProps = {}) {
   const pathname = usePathname()
 
-  if (pathname === '/') {
+  if (!items && pathname === '/') {
     return null
   }
 
-  const pathSegments = pathname.split('/').filter(Boolean)
-  const breadcrumbs = [
-    { label: 'Home', href: '/' },
-    ...pathSegments.map((segment, index) => {
-      const href = '/' + pathSegments.slice(0, index + 1).join('/')
-      const label = segment
-        .split('-')
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ')
-      return { label, href }
-    }),
-  ]
+  let breadcrumbs = items
+
+  if (!breadcrumbs) {
+    const pathSegments = pathname.split('/').filter(Boolean)
+    breadcrumbs = [
+      { label: 'Home', href: '/' },
+      ...pathSegments.map((segment, index) => {
+        const href = '/' + pathSegments.slice(0, index + 1).join('/')
+        const label = segment
+          .split('-')
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ')
+        return { label, href }
+      }),
+    ]
+  }
 
   return (
     <Box
       sx={{
-        bgcolor: 'background.paper',
-        py: 2,
-        borderBottom: '1px solid',
+        bgcolor: 'transparent',
+        py: items ? 0 : 2,
+        mb: items ? 3 : 0,
+        borderBottom: items ? 'none' : '1px solid',
         borderColor: 'divider',
       }}
     >
       <MuiBreadcrumbs
         separator={<NavigateNext fontSize="small" />}
         aria-label="breadcrumb"
-        sx={{ maxWidth: 'lg', mx: 'auto', px: 2 }}
+        sx={{ maxWidth: 'lg', mx: items ? 0 : 'auto', px: items ? 0 : 2 }}
       >
         {breadcrumbs.map((crumb, index) => {
-          const isLast = index === breadcrumbs.length - 1
-          return isLast ? (
-            <Typography key={crumb.href} color="text.primary" sx={{ fontWeight: 500 }}>
+          const isLast = index === breadcrumbs!.length - 1
+          return isLast || !crumb.href ? (
+            <Typography key={crumb.label} color="text.primary" sx={{ fontWeight: 500 }}>
               {crumb.label}
             </Typography>
           ) : (
@@ -57,7 +71,7 @@ export default function Breadcrumbs() {
                 },
               }}
             >
-              {index === 0 ? <Home sx={{ fontSize: 18, verticalAlign: 'middle' }} /> : crumb.label}
+              {index === 0 && crumb.label === 'Home' ? <Home sx={{ fontSize: 18, verticalAlign: 'middle' }} /> : crumb.label}
             </Link>
           )
         })}
@@ -65,3 +79,4 @@ export default function Breadcrumbs() {
     </Box>
   )
 }
+

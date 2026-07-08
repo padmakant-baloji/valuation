@@ -90,7 +90,7 @@ export default function Header() {
           </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, alignItems: 'center' }}>
             <Button
-              onClick={() => handleScrollTo('services')}
+              href="/#services"
               sx={{ color: 'text.primary', fontWeight: 500 }}
             >
               Services
@@ -102,19 +102,25 @@ export default function Header() {
               IBBI Valuer
             </Button>
             <Button
-              href="/locations/belagavi"
+              href="/locations/karnataka"
               sx={{ color: 'text.primary', fontWeight: 500 }}
             >
               Locations
             </Button>
             <Button
-              onClick={() => handleScrollTo('about')}
+              href="/blog"
+              sx={{ color: 'text.primary', fontWeight: 500 }}
+            >
+              Blog
+            </Button>
+            <Button
+              href="/#about"
               sx={{ color: 'text.primary', fontWeight: 500 }}
             >
               About
             </Button>
             <Button
-              onClick={() => handleScrollTo('contact')}
+              href="/#contact"
               sx={{ color: 'text.primary', fontWeight: 500 }}
             >
               Contact

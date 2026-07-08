@@ -48,34 +48,36 @@ export default function Footer() {
               Quick Links
             </Typography>
             <Stack spacing={1}>
-              <Link href="#services" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
+              <Link href="/#services" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
                 Services
               </Link>
               <NextLink
-                href="/services/ibbi-registered-valuer-belagavi"
+                href="/services/property-valuation-for-loan"
                 style={{ textDecoration: 'none' }}
               >
                 <Link component="span" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
-                  IBBI Registered Valuer
+                  Loan Valuation
                 </Link>
               </NextLink>
               <NextLink
-                href="/services/bank-approved-valuation-karnataka"
+                href="/services/land-valuation"
                 style={{ textDecoration: 'none' }}
               >
                 <Link component="span" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
-                  Bank Approved Valuer
+                  Land Rate Assessment
                 </Link>
               </NextLink>
-              <NextLink href="/locations/belagavi" style={{ textDecoration: 'none' }}>
+              <NextLink href="/locations/karnataka" style={{ textDecoration: 'none' }}>
                 <Link component="span" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
-                  Belagavi Office
+                  Locations We Serve
                 </Link>
               </NextLink>
-              <Link href="#about" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
-                About Us
-              </Link>
-              <Link href="#contact" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
+              <NextLink href="/blog" style={{ textDecoration: 'none' }}>
+                <Link component="span" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
+                  Blog & Insights
+                </Link>
+              </NextLink>
+              <Link href="/#contact" color="inherit" sx={{ textDecoration: 'none', opacity: 0.9 }}>
                 Contact
               </Link>
             </Stack>
