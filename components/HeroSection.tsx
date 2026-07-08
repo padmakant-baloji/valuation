@@ -411,16 +411,18 @@ export default function HeroSection() {
                   }}
                 />
                 <Image
-                  src="/hero-illustration.png"
-                  alt="Professional Property Valuation - Building analysis with data analytics"
-                  width={480}
-                  height={480}
+                  src="/hero-photo.jpg"
+                  alt="Professional Property Valuation - Modern Architecture"
+                  width={800}
+                  height={800}
                   style={{
                     width: '100%',
                     height: 'auto',
                     position: 'relative',
                     zIndex: 1,
-                    filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))',
+                    borderRadius: '24px',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
                   }}
                   priority
                 />
