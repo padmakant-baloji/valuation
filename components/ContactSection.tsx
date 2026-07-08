@@ -13,6 +13,7 @@ import {
   Stack,
 } from '@mui/material'
 import { Phone, Email, LocationOn, Send } from '@mui/icons-material'
+import { Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 
 const propertyTypes = [
   'Residential Property',
@@ -42,6 +43,7 @@ export default function ContactSection() {
     purpose: '',
     message: '',
   })
+  const [successOpen, setSuccessOpen] = React.useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -50,23 +52,35 @@ export default function ContactSection() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you! We will contact you within 24 hours.')
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      location: '',
-      propertyType: '',
-      purpose: '',
-      message: '',
-    })
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+      setSuccessOpen(true)
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        location: '',
+        propertyType: '',
+        purpose: '',
+        message: '',
+      })
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('There was an error submitting the form. Please try again later.')
+    }
   }
 
   return (
+    <React.Fragment>
     <Box
       id="contact"
       sx={{
@@ -294,5 +308,17 @@ export default function ContactSection() {
         </Grid>
       </Container>
     </Box>
-  )
+      <Dialog open={successOpen} onClose={() => setSuccessOpen(false)}>
+        <DialogTitle>Thank you!</DialogTitle>
+        <DialogContent>
+          <p>We will reach you back within a few hours.</p>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setSuccessOpen(false)} autoFocus>
+            Close
+          </Button>
+        </DialogActions>
+      </Dialog>
+  </React.Fragment>
+)
 }
