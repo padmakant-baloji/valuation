@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=$HOME/public_html
-    - /bin/cp -Rf out/. $DEPLOYPATH/
-    - if [ -f "$DEPLOYPATH/.htaccess" ]; then /bin/chmod 644 $DEPLOYPATH/.htaccess; fi
