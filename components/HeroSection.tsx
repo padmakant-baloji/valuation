@@ -21,6 +21,8 @@ import {
   Verified,
   Star,
   ArrowForward,
+  Security,
+  Gavel,
 } from '@mui/icons-material'
 import Image from 'next/image'
 
@@ -75,128 +77,291 @@ export default function HeroSection() {
   return (
     <Box
       sx={{
-        background: 'linear-gradient(135deg, #0a0f2e 0%, #1a237e 40%, #283593 70%, #0d1442 100%)',
-        color: 'white',
-        pt: { xs: 12, md: 14 },
-        pb: { xs: 8, md: 10 },
         position: 'relative',
         overflow: 'hidden',
-        minHeight: { md: '92vh' },
+        minHeight: { xs: 'auto', md: '100vh' },
         display: 'flex',
         alignItems: 'center',
-        // Animated gradient mesh background
-        '&::before': {
-          content: '""',
-          position: 'absolute',
-          top: '-50%',
-          left: '-50%',
-          right: '-50%',
-          bottom: '-50%',
-          background: `
-            radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-            radial-gradient(ellipse at 40% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)
-          `,
-          animation: 'meshMove 20s ease-in-out infinite',
-          '@keyframes meshMove': {
-            '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
-            '33%': { transform: 'translate(2%, -2%) rotate(1deg)' },
-            '66%': { transform: 'translate(-1%, 1%) rotate(-0.5deg)' },
-          },
+        color: 'white',
+        pt: { xs: 12, md: 0 },
+        pb: { xs: 8, md: 0 },
+
+        // ===== ALL KEYFRAMES =====
+        '@keyframes fadeSlideUp': {
+          from: { opacity: 0, transform: 'translateY(30px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
         },
-        // Subtle grid overlay
-        '&::after': {
-          content: '""',
+        '@keyframes fadeSlideLeft': {
+          from: { opacity: 0, transform: 'translateX(40px)' },
+          to: { opacity: 1, transform: 'translateX(0)' },
+        },
+        '@keyframes kenBurns': {
+          '0%': { transform: 'scale(1.0)' },
+          '50%': { transform: 'scale(1.08)' },
+          '100%': { transform: 'scale(1.0)' },
+        },
+        '@keyframes shimmer': {
+          '0%': { left: '-100%' },
+          '100%': { left: '200%' },
+        },
+        '@keyframes pulseGlow': {
+          '0%, 100%': { opacity: 0.3, transform: 'translate(-50%, -50%) scale(1)' },
+          '50%': { opacity: 0.6, transform: 'translate(-50%, -50%) scale(1.08)' },
+        },
+        '@keyframes floatOrb': {
+          '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+          '50%': { transform: 'translateY(-30px) scale(1.1)' },
+        },
+        '@keyframes floatOrb2': {
+          '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
+          '33%': { transform: 'translateY(20px) translateX(10px)' },
+          '66%': { transform: 'translateY(-10px) translateX(-5px)' },
+        },
+        '@keyframes floatOrb3': {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(-15px) rotate(5deg)' },
+        },
+        '@keyframes heroFloat': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        '@keyframes floatCard1': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        '@keyframes floatCard2': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(10px)' },
+        },
+        '@keyframes floatCard3': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
+        '@keyframes meshMove': {
+          '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+          '33%': { transform: 'translate(2%, -2%) rotate(1deg)' },
+          '66%': { transform: 'translate(-1%, 1%) rotate(-0.5deg)' },
+        },
+        '@keyframes scanLine': {
+          '0%': { top: '-10%' },
+          '100%': { top: '110%' },
+        },
+        '@keyframes borderGlow': {
+          '0%, 100%': { opacity: 0.3 },
+          '50%': { opacity: 0.8 },
+        },
+        '@keyframes rotateGlow': {
+          '0%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+          '100%': { transform: 'translate(-50%, -50%) rotate(360deg)' },
+        },
+      }}
+    >
+      {/* ===== HERO BACKGROUND IMAGE with Ken Burns Animation ===== */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '-5%',
+          left: '-5%',
+          right: '-5%',
+          bottom: '-5%',
+          zIndex: 0,
+          overflow: 'hidden',
+        }}
+      >
+        <Image
+          src="/hero-bank-finance.png"
+          alt="Bank Approved Property Valuation - Certified Professional Valuer with Financial Institution Background"
+          fill
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center 30%',
+          }}
+          priority
+          quality={90}
+          sizes="100vw"
+        />
+        {/* Ken Burns subtle zoom */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            animation: 'kenBurns 20s ease-in-out infinite',
+            transformOrigin: 'center center',
+          }}
+        />
+      </Box>
+
+      {/* ===== DARK GRADIENT OVERLAY — heavier on left for text ===== */}
+      <Box
+        sx={{
           position: 'absolute',
           top: 0,
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: `
-            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-          pointerEvents: 'none',
-        },
-      }}
-    >
-      {/* Floating decorative orbs */}
-      <Box
-        sx={{
-          position: 'absolute',
-          width: 300,
-          height: 300,
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255, 111, 0, 0.12) 0%, transparent 70%)',
-          top: '10%',
-          right: '-5%',
-          filter: 'blur(40px)',
-          animation: 'floatOrb 8s ease-in-out infinite',
-          '@keyframes floatOrb': {
-            '0%, 100%': { transform: 'translateY(0px) scale(1)' },
-            '50%': { transform: 'translateY(-30px) scale(1.1)' },
-          },
-        }}
-      />
-      <Box
-        sx={{
-          position: 'absolute',
-          width: 200,
-          height: 200,
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%)',
-          bottom: '15%',
-          left: '5%',
-          filter: 'blur(30px)',
-          animation: 'floatOrb2 10s ease-in-out infinite',
-          '@keyframes floatOrb2': {
-            '0%, 100%': { transform: 'translateY(0px)' },
-            '50%': { transform: 'translateY(20px)' },
+          zIndex: 1,
+          background: {
+            xs: `linear-gradient(
+              180deg,
+              rgba(7, 11, 36, 0.92) 0%,
+              rgba(13, 20, 66, 0.88) 40%,
+              rgba(26, 35, 126, 0.82) 70%,
+              rgba(7, 11, 36, 0.90) 100%
+            )`,
+            md: `linear-gradient(
+              120deg,
+              rgba(7, 11, 36, 0.95) 0%,
+              rgba(13, 20, 66, 0.90) 25%,
+              rgba(26, 35, 126, 0.78) 50%,
+              rgba(40, 53, 147, 0.65) 75%,
+              rgba(13, 20, 66, 0.80) 100%
+            )`,
           },
         }}
       />
 
-      {/* Floating particles */}
-      {[...Array(6)].map((_, i) => (
+      {/* ===== ANIMATED GRADIENT MESH ===== */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: '-50%',
+          left: '-50%',
+          right: '-50%',
+          bottom: '-50%',
+          zIndex: 2,
+          pointerEvents: 'none',
+          background: `
+            radial-gradient(ellipse at 15% 40%, rgba(99, 102, 241, 0.18) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.10) 0%, transparent 50%),
+            radial-gradient(ellipse at 40% 80%, rgba(59, 130, 246, 0.10) 0%, transparent 50%),
+            radial-gradient(ellipse at 70% 60%, rgba(255, 111, 0, 0.06) 0%, transparent 40%)
+          `,
+          animation: 'meshMove 20s ease-in-out infinite',
+        }}
+      />
+
+      {/* ===== SUBTLE GRID OVERLAY ===== */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 2,
+          pointerEvents: 'none',
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)
+          `,
+          backgroundSize: '60px 60px',
+        }}
+      />
+
+      {/* ===== ANIMATED SCAN LINE ===== */}
+      <Box
+        sx={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          height: '1.5px',
+          zIndex: 3,
+          pointerEvents: 'none',
+          background: 'linear-gradient(90deg, transparent 0%, rgba(251, 191, 36, 0.3) 30%, rgba(99, 102, 241, 0.4) 70%, transparent 100%)',
+          animation: 'scanLine 10s linear infinite',
+          filter: 'blur(0.5px)',
+        }}
+      />
+
+      {/* ===== FLOATING DECORATIVE ORBS — gold themed for banking ===== */}
+      <Box
+        sx={{
+          position: 'absolute',
+          width: { xs: 200, md: 350 },
+          height: { xs: 200, md: 350 },
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(251, 191, 36, 0.12) 0%, transparent 70%)',
+          top: '5%',
+          right: '-8%',
+          filter: 'blur(50px)',
+          zIndex: 2,
+          animation: 'floatOrb 8s ease-in-out infinite',
+        }}
+      />
+      <Box
+        sx={{
+          position: 'absolute',
+          width: { xs: 150, md: 250 },
+          height: { xs: 150, md: 250 },
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%)',
+          bottom: '10%',
+          left: '3%',
+          filter: 'blur(40px)',
+          zIndex: 2,
+          animation: 'floatOrb2 12s ease-in-out infinite',
+        }}
+      />
+      <Box
+        sx={{
+          position: 'absolute',
+          width: { xs: 100, md: 180 },
+          height: { xs: 100, md: 180 },
+          borderRadius: '50%',
+          background: 'radial-gradient(circle, rgba(74, 222, 128, 0.08) 0%, transparent 70%)',
+          top: '45%',
+          left: '50%',
+          filter: 'blur(35px)',
+          zIndex: 2,
+          animation: 'floatOrb3 10s ease-in-out infinite',
+        }}
+      />
+
+      {/* ===== FLOATING PARTICLES (gold + indigo themed) ===== */}
+      {[...Array(8)].map((_, i) => (
         <Box
           key={i}
           sx={{
             position: 'absolute',
-            width: { xs: 3, md: 4 },
-            height: { xs: 3, md: 4 },
+            width: { xs: 2, md: i % 2 === 0 ? 4 : 3 },
+            height: { xs: 2, md: i % 2 === 0 ? 4 : 3 },
             borderRadius: '50%',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            top: `${15 + i * 14}%`,
-            left: `${10 + i * 15}%`,
-            animation: `particle${i} ${6 + i * 2}s ease-in-out infinite`,
+            backgroundColor: i % 3 === 0
+              ? 'rgba(251, 191, 36, 0.5)'
+              : i % 3 === 1
+                ? 'rgba(99, 102, 241, 0.4)'
+                : 'rgba(74, 222, 128, 0.3)',
+            top: `${8 + i * 11}%`,
+            left: `${5 + i * 12}%`,
+            zIndex: 3,
+            animation: `particle${i} ${5 + i * 1.5}s ease-in-out infinite`,
             [`@keyframes particle${i}`]: {
               '0%, 100%': {
                 transform: 'translateY(0px) translateX(0px)',
-                opacity: 0.2,
+                opacity: 0.15,
               },
               '50%': {
-                transform: `translateY(${-20 + i * 5}px) translateX(${10 - i * 3}px)`,
-                opacity: 0.6,
+                transform: `translateY(${-25 + i * 6}px) translateX(${12 - i * 3}px)`,
+                opacity: 0.7,
               },
             },
           }}
         />
       ))}
 
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+      {/* ===== MAIN CONTENT ===== */}
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 10 }}>
         <Grid container spacing={6} alignItems="center">
-          {/* Left Content */}
+          {/* ===== LEFT CONTENT ===== */}
           <Grid item xs={12} md={7}>
             {/* Trust badge */}
             <Box
               sx={{
                 animation: 'fadeSlideUp 0.8s ease-out forwards',
                 opacity: 0,
-                '@keyframes fadeSlideUp': {
-                  from: { opacity: 0, transform: 'translateY(30px)' },
-                  to: { opacity: 1, transform: 'translateY(0)' },
-                },
               }}
             >
               <Chip
@@ -214,6 +379,7 @@ export default function HeroSection() {
                   borderRadius: '50px',
                   backdropFilter: 'blur(10px)',
                   '& .MuiChip-icon': { ml: 1 },
+                  animation: 'borderGlow 3s ease-in-out infinite',
                 }}
               />
             </Box>
@@ -279,10 +445,22 @@ export default function HeroSection() {
                   boxShadow: '0 8px 32px rgba(255, 111, 0, 0.35)',
                   borderRadius: '14px',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: '-100%',
+                    width: '100%',
+                    height: '100%',
+                    background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent)',
+                    animation: 'shimmer 3s ease-in-out infinite',
+                  },
                   '&:hover': {
                     background: 'linear-gradient(135deg, #ff8f00 0%, #ffa000 100%)',
-                    boxShadow: '0 12px 40px rgba(255, 111, 0, 0.45)',
-                    transform: 'translateY(-2px)',
+                    boxShadow: '0 12px 40px rgba(255, 111, 0, 0.5)',
+                    transform: 'translateY(-3px) scale(1.02)',
                   },
                 }}
               >
@@ -306,8 +484,9 @@ export default function HeroSection() {
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   '&:hover': {
                     borderColor: 'rgba(255, 255, 255, 0.5)',
-                    bgcolor: 'rgba(255, 255, 255, 0.1)',
-                    transform: 'translateY(-2px)',
+                    bgcolor: 'rgba(255, 255, 255, 0.12)',
+                    transform: 'translateY(-3px)',
+                    boxShadow: '0 8px 25px rgba(99, 102, 241, 0.2)',
                   },
                 }}
               >
@@ -315,7 +494,7 @@ export default function HeroSection() {
               </Button>
             </Stack>
 
-            {/* Trust indicators with icons */}
+            {/* Trust indicators — banking focused */}
             <Grid
               container
               spacing={1.5}
@@ -326,7 +505,7 @@ export default function HeroSection() {
             >
               {[
                 { text: '40,000+ Valuations Completed', icon: <Assessment sx={{ fontSize: 18 }} /> },
-                { text: '10+ Years of Experience', icon: <TrendingUp sx={{ fontSize: 18 }} /> },
+                { text: 'Bank & NBFC Compliant Reports', icon: <AccountBalance sx={{ fontSize: 18 }} /> },
                 { text: 'IBBI Registered Valuer', icon: <Verified sx={{ fontSize: 18 }} /> },
                 { text: 'Chartered Engineer (IEI)', icon: <Star sx={{ fontSize: 18 }} /> },
               ].map((item, index) => (
@@ -337,11 +516,18 @@ export default function HeroSection() {
                       alignItems: 'center',
                       gap: 1,
                       py: 0.8,
-                      transition: 'transform 0.2s ease',
-                      '&:hover': { transform: 'translateX(4px)' },
+                      transition: 'all 0.3s ease',
+                      '&:hover': {
+                        transform: 'translateX(6px)',
+                        '& .trust-icon-box': {
+                          bgcolor: 'rgba(74, 222, 128, 0.25)',
+                          boxShadow: '0 0 15px rgba(74, 222, 128, 0.2)',
+                        },
+                      },
                     }}
                   >
                     <Box
+                      className="trust-icon-box"
                       sx={{
                         display: 'flex',
                         alignItems: 'center',
@@ -352,6 +538,7 @@ export default function HeroSection() {
                         bgcolor: 'rgba(74, 222, 128, 0.12)',
                         color: '#4ade80',
                         flexShrink: 0,
+                        transition: 'all 0.3s ease',
                       }}
                     >
                       {item.icon}
@@ -368,20 +555,16 @@ export default function HeroSection() {
             </Grid>
           </Grid>
 
-          {/* Right Column - Illustration + Stats */}
+          {/* ===== RIGHT COLUMN — Hero Image with floating stat cards ===== */}
           <Grid item xs={12} md={5}>
             <Box
               sx={{
                 position: 'relative',
                 animation: 'fadeSlideLeft 1s ease-out 0.4s forwards',
                 opacity: 0,
-                '@keyframes fadeSlideLeft': {
-                  from: { opacity: 0, transform: 'translateX(40px)' },
-                  to: { opacity: 1, transform: 'translateX(0)' },
-                },
               }}
             >
-              {/* Main illustration with glow effect */}
+              {/* Main hero image */}
               <Box
                 sx={{
                   position: 'relative',
@@ -389,10 +572,6 @@ export default function HeroSection() {
                   maxWidth: 480,
                   mx: 'auto',
                   animation: 'heroFloat 6s ease-in-out infinite',
-                  '@keyframes heroFloat': {
-                    '0%, 100%': { transform: 'translateY(0px)' },
-                    '50%': { transform: 'translateY(-12px)' },
-                  },
                 }}
               >
                 {/* Glow behind image */}
@@ -402,17 +581,18 @@ export default function HeroSection() {
                     top: '50%',
                     left: '50%',
                     transform: 'translate(-50%, -50%)',
-                    width: '80%',
-                    height: '80%',
-                    borderRadius: '50%',
-                    background: 'radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, transparent 70%)',
-                    filter: 'blur(40px)',
+                    width: '90%',
+                    height: '90%',
+                    borderRadius: '30px',
+                    background: 'radial-gradient(circle, rgba(251, 191, 36, 0.2) 0%, rgba(99, 102, 241, 0.15) 40%, transparent 70%)',
+                    filter: 'blur(50px)',
                     zIndex: 0,
+                    animation: 'pulseGlow 4s ease-in-out infinite',
                   }}
                 />
                 <Image
-                  src="/hero-photo.jpg"
-                  alt="Professional Property Valuation - Modern Architecture"
+                  src="/hero-bank-finance.png"
+                  alt="Bank Approved Certified Property Valuer - Professional Valuation Services for Banks and Financial Institutions"
                   width={800}
                   height={800}
                   style={{
@@ -421,15 +601,31 @@ export default function HeroSection() {
                     position: 'relative',
                     zIndex: 1,
                     borderRadius: '24px',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                    border: '1px solid rgba(251, 191, 36, 0.2)',
+                    boxShadow: '0 25px 60px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(251, 191, 36, 0.1)',
                   }}
                   priority
                 />
+                {/* Rotating border glow effect */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    width: '102%',
+                    height: '102%',
+                    borderRadius: '25px',
+                    zIndex: 0,
+                    pointerEvents: 'none',
+                    background: 'conic-gradient(from 0deg, transparent 0%, rgba(251, 191, 36, 0.3) 10%, transparent 20%, rgba(99, 102, 241, 0.3) 40%, transparent 50%, rgba(74, 222, 128, 0.2) 70%, transparent 80%, rgba(251, 191, 36, 0.3) 90%, transparent 100%)',
+                    animation: 'rotateGlow 8s linear infinite',
+                    filter: 'blur(8px)',
+                  }}
+                />
               </Box>
 
-              {/* Animated stat cards floating around the image */}
-              {/* Top-right stat card */}
+              {/* ===== FLOATING STAT CARDS ===== */}
+              {/* Top-right: Partner Banks */}
               <Paper
                 elevation={0}
                 sx={{
@@ -440,14 +636,16 @@ export default function HeroSection() {
                   px: 2,
                   bgcolor: 'rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  border: '1px solid rgba(251, 191, 36, 0.2)',
                   borderRadius: '16px',
                   color: 'white',
-                  zIndex: 2,
+                  zIndex: 3,
                   animation: 'floatCard1 5s ease-in-out infinite',
-                  '@keyframes floatCard1': {
-                    '0%, 100%': { transform: 'translateY(0px)' },
-                    '50%': { transform: 'translateY(-8px)' },
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    bgcolor: 'rgba(255, 255, 255, 0.15)',
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 8px 25px rgba(251, 191, 36, 0.25)',
                   },
                 }}
               >
@@ -483,7 +681,7 @@ export default function HeroSection() {
                 </Stack>
               </Paper>
 
-              {/* Bottom-left stat card */}
+              {/* Bottom-left: Valuations Done */}
               <Paper
                 elevation={0}
                 sx={{
@@ -494,14 +692,16 @@ export default function HeroSection() {
                   px: 2,
                   bgcolor: 'rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  border: '1px solid rgba(74, 222, 128, 0.2)',
                   borderRadius: '16px',
                   color: 'white',
-                  zIndex: 2,
+                  zIndex: 3,
                   animation: 'floatCard2 6s ease-in-out infinite',
-                  '@keyframes floatCard2': {
-                    '0%, 100%': { transform: 'translateY(0px)' },
-                    '50%': { transform: 'translateY(10px)' },
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    bgcolor: 'rgba(255, 255, 255, 0.15)',
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 8px 25px rgba(74, 222, 128, 0.2)',
                   },
                 }}
               >
@@ -537,7 +737,7 @@ export default function HeroSection() {
                 </Stack>
               </Paper>
 
-              {/* Rating badge */}
+              {/* Bottom-right: Client Rating */}
               <Paper
                 elevation={0}
                 sx={{
@@ -548,14 +748,16 @@ export default function HeroSection() {
                   px: 2,
                   bgcolor: 'rgba(255, 255, 255, 0.1)',
                   backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  border: '1px solid rgba(251, 191, 36, 0.2)',
                   borderRadius: '16px',
                   color: 'white',
-                  zIndex: 2,
+                  zIndex: 3,
                   animation: 'floatCard3 7s ease-in-out infinite',
-                  '@keyframes floatCard3': {
-                    '0%, 100%': { transform: 'translateY(0px)' },
-                    '50%': { transform: 'translateY(-6px)' },
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    bgcolor: 'rgba(255, 255, 255, 0.15)',
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 8px 25px rgba(251, 191, 36, 0.2)',
                   },
                 }}
               >
@@ -600,7 +802,7 @@ export default function HeroSection() {
           </Grid>
         </Grid>
 
-        {/* Bottom Stats Bar */}
+        {/* ===== BOTTOM STATS BAR ===== */}
         <Box
           sx={{
             mt: { xs: 6, md: 8 },
@@ -616,6 +818,18 @@ export default function HeroSection() {
               border: '1px solid rgba(255, 255, 255, 0.1)',
               borderRadius: '20px',
               p: { xs: 3, md: 4 },
+              position: 'relative',
+              overflow: 'hidden',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: '-100%',
+                width: '50%',
+                height: '100%',
+                background: 'linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.04), transparent)',
+                animation: 'shimmer 6s ease-in-out infinite',
+              },
             }}
           >
             <Grid container spacing={3} justifyContent="center" alignItems="center">
@@ -647,6 +861,14 @@ export default function HeroSection() {
                     spacing={1}
                     sx={{
                       position: 'relative',
+                      transition: 'all 0.3s ease',
+                      '&:hover': {
+                        transform: 'translateY(-4px)',
+                        '& .stat-icon-box': {
+                          boxShadow: '0 0 20px rgba(251, 191, 36, 0.25)',
+                          transform: 'scale(1.1)',
+                        },
+                      },
                       '&::after': index < 3 ? {
                         content: '""',
                         position: 'absolute',
@@ -661,6 +883,7 @@ export default function HeroSection() {
                     }}
                   >
                     <Box
+                      className="stat-icon-box"
                       sx={{
                         width: 52,
                         height: 52,
@@ -670,6 +893,7 @@ export default function HeroSection() {
                         alignItems: 'center',
                         justifyContent: 'center',
                         mb: 0.5,
+                        transition: 'all 0.3s ease',
                       }}
                     >
                       {stat.icon}
